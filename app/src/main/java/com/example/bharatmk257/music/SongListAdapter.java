@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -20,21 +19,21 @@ public class SongListAdapter extends ArrayAdapter <SongList> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
 
-        View gridItemView = convertView;
-        if(gridItemView == null){
-            gridItemView = LayoutInflater.from(getContext()) .inflate(
-                R.layout.music_grid_item, parent, false);
+        View listItemView = convertView;
+        if(listItemView == null){
+            listItemView = LayoutInflater.from(getContext()) .inflate(
+                R.layout.music_list_item, parent, false);
             }
 
             SongList currentSongList = getItem(position);
 
-        TextView songNameTextView = (TextView) gridItemView.findViewById(R.id.SongTextView);
+        TextView songNameTextView = (TextView) listItemView.findViewById(R.id.SongTextView);
         songNameTextView.setText(currentSongList.getSongName());
 
-        ImageView songImageView= (ImageView) gridItemView.findViewById(R.id.SongImageView);
+        ImageView songImageView= (ImageView) listItemView.findViewById(R.id.SongImageView);
         songImageView.setImageResource(currentSongList.getSongImage());
 
-        return gridItemView;
+        return listItemView;
 
         }
     }

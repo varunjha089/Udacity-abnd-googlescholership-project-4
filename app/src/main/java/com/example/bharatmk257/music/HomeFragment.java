@@ -17,8 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 
-public class HomeFragment  extends  Fragment {
-
+public class HomeFragment extends Fragment {
 
 
     @Nullable
@@ -30,7 +29,7 @@ public class HomeFragment  extends  Fragment {
 
 }
 
-//    public class Fragment extends AppCompatActivity {
+//    public class HomeFragment extends AppCompatActivity {
 //
 //        @Override
 //        protected void onCreate(Bundle savedInstanceState) {
@@ -51,14 +50,14 @@ public class HomeFragment  extends  Fragment {
 //
 //
 //
-//            SongList songList = new SongList(this, songLists);
+//            SongListAdapter songAdapter = new SongListAdapter(this, songLists);
 //
-//            GridView gridView = (GridView) findViewById(R.id.listOfSong);
+//            ListView listView = (ListView) findViewById(R.id.listOfSong);
 //
-//            gridView.setAdapter(songList);
+//            listView.setAdapter(songAdapter);
 //
 //        }
 //    }
 
-//}
-//
+
+

@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity_music"></activity>
+        <activity android:name=".HomeFragment" />
     </application>
 
 </manifest>
