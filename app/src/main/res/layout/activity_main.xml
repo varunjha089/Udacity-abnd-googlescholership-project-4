@@ -4,18 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <FrameLayout
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginBottom="126dp"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/musicPlayer_dock">
+
 
     </FrameLayout>
 
     <LinearLayout
+        android:id="@+id/musicPlayer_dock"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:background="@color/black"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -28,6 +34,7 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="15dp"
+            android:layout_gravity="center_vertical"
             android:text="Name Of Song"
             android:textColor="@color/white"
             android:textSize="20sp" />
@@ -36,6 +43,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginStart="15dp"
+            android:layout_gravity="center_vertical"
             android:background="@drawable/ic_keyboard_arrow_left_black_24dp" />
 
         <ImageView
@@ -43,11 +51,13 @@
             android:layout_height="50dp"
             android:layout_marginStart="15dp"
             android:layout_marginEnd="15dp"
+            android:layout_gravity="center_vertical"
             android:background="@drawable/ic_play_arrow_black_24dp" />
 
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
             android:background="@drawable/ic_keyboard_arrow_right_black_24dp" />
     </LinearLayout>
 

@@ -43,16 +43,28 @@ public class HomeFragment extends Fragment {
     private void loadData(){
 
         songLists = new ArrayList<>();
-        songLists.add(new SongList("one",R.drawable.playlist0));
-        songLists.add(new SongList("two",R.drawable.playlist0));
-        songLists.add(new SongList("three",R.drawable.playlist0));
-        songLists.add(new SongList("four",R.drawable.playlist0));
-        songLists.add(new SongList("five",R.drawable.playlist0));
-        songLists.add(new SongList("six",R.drawable.playlist0));
-        songLists.add(new SongList("seven",R.drawable.playlist0));
-        songLists.add(new SongList("eight",R.drawable.playlist0));
-        songLists.add(new SongList("nine",R.drawable.playlist0));
-        songLists.add(new SongList("ten",R.drawable.playlist0));
+        songLists.add(new SongList("music",R.drawable.playlist0));
+        songLists.add(new SongList("music",R.drawable.playlist0));
+        songLists.add(new SongList("music",R.drawable.playlist0));
+        songLists.add(new SongList("music",R.drawable.playlist0));
+        songLists.add(new SongList("music",R.drawable.playlist0));
+        songLists.add(new SongList("music",R.drawable.playlist0));
+        songLists.add(new SongList("music",R.drawable.playlist0));
+        songLists.add(new SongList("music",R.drawable.playlist0));
+        songLists.add(new SongList("music",R.drawable.playlist0));
+        songLists.add(new SongList("music",R.drawable.playlist0));
+        songLists.add(new SongList("music",R.drawable.playlist0));
+        songLists.add(new SongList("music",R.drawable.playlist0));
+        songLists.add(new SongList("music",R.drawable.playlist0));
+        songLists.add(new SongList("music",R.drawable.playlist0));
+        songLists.add(new SongList("music",R.drawable.playlist0));
+        songLists.add(new SongList("music",R.drawable.playlist0));
+        songLists.add(new SongList("music",R.drawable.playlist0));
+        songLists.add(new SongList("music",R.drawable.playlist0));
+        songLists.add(new SongList("music",R.drawable.playlist0));
+        songLists.add(new SongList("music",R.drawable.playlist0));
+        songLists.add(new SongList("music",R.drawable.playlist0));
+
 
         songAdapter = new SongListAdapter  (getActivity(), songLists);
 
