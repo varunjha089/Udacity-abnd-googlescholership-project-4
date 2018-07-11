@@ -1,10 +1,12 @@
 package com.example.bharatmk257.music;
 
-import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.GridView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -12,13 +14,12 @@ import java.util.ArrayList;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.RecyclerView;
 
 
 public class HomeFragment extends Fragment {
 
     private SongListAdapter songAdapter;
-    private ListView listView;
+    private GridView gridView;
     private ArrayList<SongList> songLists;
 
 
@@ -37,10 +38,12 @@ public class HomeFragment extends Fragment {
     }
 
     private void initViews(){
-        listView = getActivity().findViewById(R.id.listOfSong);
+        gridView = getActivity().findViewById(R.id.gridOfSong);
     }
 
+
     private void loadData(){
+
 
         songLists = new ArrayList<>();
         songLists.add(new SongList("music",R.drawable.playlist0));
@@ -67,10 +70,19 @@ public class HomeFragment extends Fragment {
 
 
         songAdapter = new SongListAdapter  (getActivity(), songLists);
+//
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View view,
+                                    int position, long id) {
 
+                SongList songList = (SongList) parent.getItemAtPosition(position);
+                Intent songNameIntent = new Intent(getActivity(), activity_music.class);
+                startActivity(songNameIntent);
 
-        listView.setAdapter(songAdapter);
-
+            }
+        });
+//
+        gridView.setAdapter(songAdapter);
 
     }
 
