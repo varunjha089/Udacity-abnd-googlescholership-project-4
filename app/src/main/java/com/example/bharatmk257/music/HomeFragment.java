@@ -7,15 +7,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.ListView;
-
 import java.util.ArrayList;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-
+//fragment HomeFragment
 public class HomeFragment extends Fragment {
 
     private SongListAdapter songAdapter;
@@ -27,7 +24,6 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_home, null);
-
     }
 
     @Override
@@ -41,36 +37,35 @@ public class HomeFragment extends Fragment {
         gridView = getActivity().findViewById(R.id.gridOfSong);
     }
 
-
     private void loadData(){
 
-
+        //Array List Of songs
         songLists = new ArrayList<>();
-        songLists.add(new SongList("music",R.drawable.playlist0));
-        songLists.add(new SongList("music",R.drawable.playlist0));
-        songLists.add(new SongList("music",R.drawable.playlist0));
-        songLists.add(new SongList("music",R.drawable.playlist0));
-        songLists.add(new SongList("music",R.drawable.playlist0));
-        songLists.add(new SongList("music",R.drawable.playlist0));
-        songLists.add(new SongList("music",R.drawable.playlist0));
-        songLists.add(new SongList("music",R.drawable.playlist0));
-        songLists.add(new SongList("music",R.drawable.playlist0));
-        songLists.add(new SongList("music",R.drawable.playlist0));
-        songLists.add(new SongList("music",R.drawable.playlist0));
-        songLists.add(new SongList("music",R.drawable.playlist0));
-        songLists.add(new SongList("music",R.drawable.playlist0));
-        songLists.add(new SongList("music",R.drawable.playlist0));
-        songLists.add(new SongList("music",R.drawable.playlist0));
-        songLists.add(new SongList("music",R.drawable.playlist0));
-        songLists.add(new SongList("music",R.drawable.playlist0));
-        songLists.add(new SongList("music",R.drawable.playlist0));
-        songLists.add(new SongList("music",R.drawable.playlist0));
-        songLists.add(new SongList("music",R.drawable.playlist0));
-        songLists.add(new SongList("music",R.drawable.playlist0));
+        songLists.add(new SongList("Music",R.drawable.playlist0));
+        songLists.add(new SongList("Music",R.drawable.playlist0));
+        songLists.add(new SongList("Music",R.drawable.playlist0));
+        songLists.add(new SongList("Music",R.drawable.playlist0));
+        songLists.add(new SongList("Music",R.drawable.playlist0));
+        songLists.add(new SongList("Music",R.drawable.playlist0));
+        songLists.add(new SongList("Music",R.drawable.playlist0));
+        songLists.add(new SongList("Music",R.drawable.playlist0));
+        songLists.add(new SongList("Music",R.drawable.playlist0));
+        songLists.add(new SongList("Music",R.drawable.playlist0));
+        songLists.add(new SongList("Music",R.drawable.playlist0));
+        songLists.add(new SongList("Music",R.drawable.playlist0));
+        songLists.add(new SongList("Music",R.drawable.playlist0));
+        songLists.add(new SongList("Music",R.drawable.playlist0));
+        songLists.add(new SongList("Music",R.drawable.playlist0));
+        songLists.add(new SongList("Music",R.drawable.playlist0));
+        songLists.add(new SongList("Music",R.drawable.playlist0));
+        songLists.add(new SongList("Music",R.drawable.playlist0));
+        songLists.add(new SongList("Music",R.drawable.playlist0));
+        songLists.add(new SongList("Music",R.drawable.playlist0));
 
 
         songAdapter = new SongListAdapter  (getActivity(), songLists);
-//
+
+//OnClickListener for grid View If user Click any Grid start playing song
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
@@ -81,7 +76,7 @@ public class HomeFragment extends Fragment {
 
             }
         });
-//
+        // for setting adapter to grid view
         gridView.setAdapter(songAdapter);
 
     }
