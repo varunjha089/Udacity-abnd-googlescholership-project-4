@@ -3,7 +3,6 @@
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:background="@color/black">
 
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -12,6 +11,5 @@
         android:text="@string/title_list"
         android:textColor="@color/white"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
-
 
 </RelativeLayout>

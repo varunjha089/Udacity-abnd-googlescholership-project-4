@@ -11,18 +11,13 @@ import android.widget.TextView;
 import android.view.View.OnClickListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-
-
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
         //start code for fragment
-
         //loading the default fragment
         loadFragment(new HomeFragment());
 
@@ -42,7 +37,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 }
             });
         }
-
 
         public boolean onNavigationItemSelected (@NonNull MenuItem item){
             Fragment fragment = null;
@@ -82,8 +76,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         }
 
         //Fragment is over
-
-
     }
 
 

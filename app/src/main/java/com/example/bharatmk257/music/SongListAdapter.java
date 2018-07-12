@@ -15,7 +15,6 @@ public class SongListAdapter extends ArrayAdapter <SongList> {
     public SongListAdapter(Activity context, ArrayList<SongList>SongList){
         super(context,0,SongList);
     }
-
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
 
